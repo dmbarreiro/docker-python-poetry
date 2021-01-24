@@ -20,7 +20,9 @@ USER poetry
 
 # Poetry install and configuration
 ENV PATH /home/poetry/.poetry/bin:$PATH
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - 
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+# To set the desired poetry version
+# RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - --version 1.1.4
 RUN poetry config virtualenvs.create false
 
 CMD ["/bin/bash"]
