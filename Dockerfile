@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.8
 
 # make Apt non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/90root && \
