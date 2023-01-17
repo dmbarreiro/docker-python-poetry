@@ -13,8 +13,8 @@ RUN apt update && apt install -y curl sudo gettext
 # ENV LANG=C.UTF-8
 
 # Poetry install and configuration
-ENV PATH /root/.poetry/bin:$PATH
-RUN curl -sSL https://install.python-poetry.org | python - --version 1.3.2
+ENV PATH /root/.local/bin:$PATH
+RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.3.2
 RUN poetry config virtualenvs.create false
 
 CMD ["/bin/bash"]
