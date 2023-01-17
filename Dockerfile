@@ -14,9 +14,7 @@ RUN apt update && apt install -y curl sudo gettext
 
 # Poetry install and configuration
 ENV PATH /root/.poetry/bin:$PATH
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-# To set the desired poetry version
-# RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - --version 1.1.4
+RUN curl -sSL https://install.python-poetry.org | python - --version 1.3.2
 RUN poetry config virtualenvs.create false
 
 CMD ["/bin/bash"]
